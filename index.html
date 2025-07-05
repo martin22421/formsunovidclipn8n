@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Konsep Video Sinematik</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f4f4f4; color: #333; max-width: 600px; margin: 40px auto; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #222; }
+        label { display: block; margin-top: 20px; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"], textarea, select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        textarea { resize: vertical; min-height: 80px; }
+        .description { font-size: 0.9em; color: #666; margin-top: 5px; }
+        input[type="submit"] { width: 100%; background-color: #A52A2A; color: white; padding: 15px; margin-top: 30px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; }
+        input[type="submit"]:hover { background-color: #8B2323; }
+    </style>
+</head>
+<body>
+
+    <h2>Generate Konsep Video Sinematik</h2>
+
+    <form action="URL_WEBHOOK_N8N_ANDA" method="POST">
+
+        <label for="konsep_utama">Konsep Utama / Premis</label>
+        <input type="text" id="konsep_utama" name="konsep_utama" placeholder="Contoh: Seorang detektif mengejar sosok misterius di kota hujan" required>
+        <p class="description">Ide dasar atau cerita singkat dari klip video Anda.</p>
+
+        <label for="deskripsi_karakter">Deskripsi Karakter / Talent</label>
+        <textarea id="deskripsi_karakter" name="deskripsi_karakter" placeholder="Contoh: Pria, 30-an, letih tapi gigih. Wanita, misterius, elegan, mengenakan gaun merah."></textarea>
+        <p class="description">Jelaskan siapa saja yang ada di dalam adegan dan penampilan mereka.</p>
+
+        <label for="setting_lokasi">Setting & Lokasi</label>
+        <input type="text" id="setting_lokasi" name="setting_lokasi" placeholder="Contoh: Gang sempit bergaya cyberpunk, bar jazz yang remang-remang" required>
+        <p class="description">Di mana adegan ini berlangsung? Jelaskan suasananya.</p>
+
+        <label for="gaya_sinematik">Gaya Sinematik & Mood</label>
+        <select id="gaya_sinematik" name="gaya_sinematik">
+            <option value="Film Noir">Film Noir (Kontras tinggi, bayangan tajam, misterius)</option>
+            <option value="Cyberpunk">Cyberpunk (Neon, futuristik, hujan, distopia)</option>
+            <option value="Thriller Psikologis">Thriller Psikologis (Tegang, close-up, gelap)</option>
+            <option value="Drama Realistis">Drama Realistis (Pencahayaan natural, handheld camera)</option>
+            <option value="Fantasi/Sureal">Fantasi/Sureal (Seperti mimpi, visual unik, aneh)</option>
+            <option value="Horor Gotik">Horor Gotik (Kastil tua, lilin, atmosfer mencekam)</option>
+        </select>
+        <p class="description">Pilih nuansa visual dan emosional yang ingin Anda capai.</p>
+        
+        <label for="jumlah_adegan">Jumlah Adegan</label>
+        <input type="number" id="jumlah_adegan" name="jumlah_adegan" value="3" min="1" max="10">
+        <p class="description">Berapa banyak potongan adegan yang ingin dibuat?</p>
+
+        <label for="aspect_ratio">Aspect Ratio</label>
+        <select id="aspect_ratio" name="aspect_ratio">
+            <option value="16:9">16:9 (Widescreen, Standar YouTube)</option>
+            <option value="9:16">9:16 (Vertikal, untuk Shorts/TikTok)</option>
+            <option value="2.35:1">2.35:1 (CinemaScope, Sangat Lebar)</option>
+            <option value="4:3">4:3 (Klasik/Retro)</option>
+        </select>
+
+        <input type="submit" value="Generate Konsep">
+    </form>
+
+</body>
+</html>
